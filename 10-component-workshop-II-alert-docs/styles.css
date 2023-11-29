@@ -5,6 +5,10 @@ body {
   height: 100vh;
 }
 
+.bi {
+  width: 1rem;
+}
+
 body::before {
   content: 'xs';
   color: white;
