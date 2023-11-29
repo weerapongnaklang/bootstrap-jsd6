@@ -26,5 +26,35 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body></body>
+
+  <body class="container-fluid">
+    <!-- กำหนด แถว row  ให้มี 2 col -->
+    <div class="row g-2">
+      <!-- แบ่ง ซ้าย-ขวา เหมือน flex โดย div parent -->
+      <!-- left -->
+      <div class="row col-9 g-2">
+        <div class="row row-col-2">
+          <!-- row 1 -->
+          <div class="col-8 g-2">
+            <div class="box"></div>
+          </div>
+          <div class="col-4 g-2">
+            <div class="box"></div>
+          </div>
+          <!-- row 2 -->
+          <div class="col-4 g-2">
+            <div class="box"></div>
+          </div>
+          <div class="col-8 g-2">
+            <div class="box"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- right -->
+      <div class="row col-3 g-2">
+        <div class="box"></div>
+      </div>
+    </div>
+  </body>
 </html>
