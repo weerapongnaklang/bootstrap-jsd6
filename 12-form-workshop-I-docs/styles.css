@@ -1,0 +1,15 @@
+body{
+  background-color: #fc7979;
+}
+
+.submit-button {
+  background-color: #38cc8a; 
+}
+
+.submit-button:hover {
+  background-color: darkgreen;
+}
+
+.header {
+  background-color: #5d54a4;
+}

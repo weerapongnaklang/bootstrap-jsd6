@@ -26,5 +26,298 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="container"></body>
+  <body class="container">
+    <!-- Button trigger modal -->
+    <button
+      type="button"
+      class="btn btn-success"
+      data-bs-toggle="modal"
+      data-bs-target="#myModal"
+    >
+      Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="myModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">Wayyyyyy!! Warning form host</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scrollable modal -->
+    <div class="modal-dialog modal-dialog-scrollable">...</div>
+    <!-- Using with >>>>> modal-dialog<<<< -->
+
+    <!-- Vertically centered modal -->
+    <div class="modal-dialog modal-dialog-centered">...</div>
+
+    <!-- Vertically centered scrollable modal -->
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      ...
+    </div>
+
+    <!-- Tooltips and popovers -->
+    <button
+      type="button"
+      class="btn btn-secondary"
+      data-bs-toggle="popover"
+      id="tooltip"
+      title="Popover title"
+      data-bs-content="Popover body content is set in this attribute."
+    >
+      button
+    </button>
+
+    <!-- Modal -->
+    <div class="modal-body">
+      <h2 class="fs-5" id="tooltip">Popover in a modal</h2>
+      <p>
+        This
+        <button
+          class="btn btn-secondary"
+          data-bs-toggle="popover"
+          title="Popover title"
+          data-bs-content="Popover body content is set in this attribute."
+        >
+          button
+        </button>
+        triggers a popover on click.
+      </p>
+      <hr />
+      <h2 class="fs-5">Tooltips in a modal</h2>
+      <p>
+        <a href="#" data-bs-toggle="tooltip" title="Tooltip">This link</a> and
+        <a href="#" data-bs-toggle="tooltip" title="Tooltip">that link</a> have
+        tooltips on hover.
+      </p>
+    </div>
+
+    <!-- แจ้งเตือนถึงผู้รับและใส่ข้อความได้ -->
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+      data-bs-whatever="@mdo"
+    >
+      Open modal for @mdo
+    </button>
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+      data-bs-whatever="@fat"
+    >
+      Open modal for @fat
+    </button>
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+      data-bs-whatever="@getbootstrap"
+    >
+      Open modal for @getbootstrap
+    </button>
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label"
+                  >Recipient:</label
+                >
+                <input type="text" class="form-control" id="recipient-name" />
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label"
+                  >Message:</label
+                >
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Send message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const exampleModal = document.getElementById("exampleModal");
+      if (exampleModal) {
+        exampleModal.addEventListener("show.bs.modal", (event) => {
+          // Button that triggered the modal
+          const button = event.relatedTarget;
+          // Extract info from data-bs-* attributes
+          const recipient = button.getAttribute("data-bs-whatever");
+          // If necessary, you could initiate an Ajax request here
+          // and then do the updating in a callback.
+
+          // Update the modal's content.
+          const modalTitle = exampleModal.querySelector(".modal-title");
+          const modalBodyInput =
+            exampleModal.querySelector(".modal-body input");
+
+          modalTitle.textContent = `New message to ${recipient}`;
+          modalBodyInput.value = recipient;
+        });
+      }
+    </script>
+
+    <!-- Toggle between modals -->
+    <div
+      class="modal fade"
+      id="exampleModalToggle"
+      aria-hidden="true"
+      aria-labelledby="exampleModalToggleLabel"
+      tabindex="-1"
+    >
+      <div class="modal-dialog $modal-fade-transform: scale(.8)">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalToggleLabel">
+              Modal 1
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Show a second modal and hide this one with the button below.
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-primary"
+              data-bs-target="#exampleModalToggle2"
+              data-bs-toggle="modal"
+            >
+              Open second modal
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="exampleModalToggle2"
+      aria-hidden="true"
+      aria-labelledby="exampleModalToggleLabel2"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">
+              Modal 2
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Hide this modal and show the first with the button below.
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-primary"
+              data-bs-target="#exampleModalToggle"
+              data-bs-toggle="modal"
+            >
+              Back to first
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      class="btn btn-primary"
+      data-bs-target="#exampleModalToggle"
+      data-bs-toggle="modal"
+    >
+      Open first modal
+    </button>
+
+    <!-- Change animation --->
+    <!-- $modal-fade-transform variable determines the transform -->
+    <!-- $modal-show-transform variable determines the transform of  $modal-fade-transform: scale(.8).  -->
+
+    <!-- Modal size >>>> modal-dialog -->
+    <!-- Fullscreen Modal  -->
+
+    <button type="button" data-bs-toggle="modal" data-bs-target="#myModal">
+      Launch modal
+    </button>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="modal"
+      aria-label="Close"
+    ></button>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="modal"
+      data-bs-target="#mymodal"
+      aria-label="Close"
+    ></button>
+  </body>
 </html>
