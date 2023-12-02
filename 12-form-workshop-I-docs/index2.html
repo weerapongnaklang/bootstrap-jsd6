@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout-Workshop-1</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- #2 Seperate PoperJS and BootstrapJS-->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="vh-100">
+    <!-- box: 1 -->
+    <div
+      class="d-flex justify-content-center align-items-center container h-100"
+    >
+      <div class="col-6">
+        <div class="d-grid">
+          <p class="mb-4 header text-light p-3 rounded-3 text-center">
+            <span class="fw-bolder">Try it free 7 days</span> then $20/mo.
+            Thereafter
+          </p>
+        </div>
+
+        <!-- box: 2 -->
+        <form class="needs-validation" novalidate>
+          <div class="card p-5">
+            <div class="card-body">
+              <!-- Alert Succes -->
+              <div
+                class="alert alert-success d-none d-flex align-items-center"
+                role="alert"
+                id="success-alert"
+              >
+                <!-- Image Alert -->
+                <svg
+                  class="bi flex-shrink-0 me-2"
+                  role="img"
+                  aria-label="Success:"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                  />
+                </svg>
+                <div><b>Success!</b> Thank you for information</div>
+              </div>
+              <!-- input -->
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="validationCustom01"
+                  placeholder=""
+                  required
+                />
+                <div class="invalid-feedback">Please fill out this field</div>
+                <label for="validationCustom01" class="form-label"
+                  >First name</label
+                >
+              </div>
+
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="floatingtext"
+                  placeholder="Last name"
+                  required
+                />
+                <div class="invalid-feedback">Please fill out this field</div>
+                <label for="floatingtext">Last name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="name@example.com"
+                  required
+                />
+                <div class="invalid-feedback">Please fill out this field</div>
+                <label for="floatingInput">Email address</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="floatingPassword"
+                  placeholder="Password"
+                  required
+                />
+                <div class="invalid-feedback">Please fill out this field</div>
+                <label for="floatingPassword">Password</label>
+              </div>
+              <!-- Submit-->
+              <div class="d-grid">
+                <button class="btn btn-success btn-lg" type="submit">
+                  CLAIM YOUR FREE TRIAL
+                </button>
+                <!-- Link -->
+                <p class="text-center mt-3 text-secondary">
+                  By clicking button. you are agreeing to our
+                  <a
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#tos-modal"
+                    class="link-danger text-decoration-none fw-bolder"
+                    >Terms and Services</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Modal Service -->
+    <div id="tos-modal" class="modal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Term of Services</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              [Intro]<br />
+              He missed me all the time<br />
+              He loves me as always<br />
+              He gives me Gucci bag<br />
+              And he gives me big money(?)<br />
+              I can feel because of you<br />
+              I don't care people talking to me<br />
+              You are my real love<br />
+              My sugar daddy<br />
+              <br />
+              [Verse 1]<br />
+              เงินทองมันเป็นของนอกกาย ดวงใจนี้มอบให้ปะป๋า<br />
+              หนูไม่ดื้อและก็ไม่งอแงนะคะ<br />
+              แต่บางทีก็มีเรื่องวุ่นวาย จริง ๆ ไม่อยากกวนใจปะป๋า<br />
+              แต่ตอนนี้หนูเดือดร้อนจริง ๆ นะคะ<br />
+              <br />
+              [Pre-Chorus]<br />
+              Ah-ah-ah-ah-ah, ถึงแม้ว่าป๊าจะแก่<br />
+              My daddy<br />
+              Oh-oh-oh-oh-oh, แต่แบบนี้อ่ะน่ารักจะตาย<br />
+              อ้อนทั้งวันยังไหว, my darling<br />
+              <br />
+              [Chorus]<br />
+              My sugar daddy, หมดใจเลยที่ฟ้าให้พ่อ<br />
+              รักจริงไม่ได้หลอก แค่อยากจะขอให้พ่อช่วยฟ้าหน่อย<br />
+              เงินในบัญชีไม่พอใช้ พ่อโอนให้ฟ้าหน่อยได้ไหม<br />
+              และอยากได้รถคันใหม่นะคะ นะคะ นะ ฟ้ารักพ่อ<br />
+              My sugar daddy, หมดใจเลยที่ฟ้าให้พ่อ<br />
+              รักจริงไม่ได้หลอก แค่อยากจะขอให้พ่อช่วยฟ้าหน่อย<br />
+              กระเป๋าดี ๆ ต้องมีใช้ พ่อซื้อให้ฟ้าหน่อยได้ไหม<br />
+              และอยากได้คอนโดใหม่นะคะ นะคะ นะ ฟ้ารักพ่อ<br />
+              <br />
+              [Post-Chorus]<br />
+              นะ นะ my darling, ooh, no, no, no<br />
+              นะ นะ my darling, ooh (Yo, it's me, Y.Y.Y)<br />
+              <br />
+              [Verse 2]<br />
+              ป๋าสั่งอะไรหรือยัง<br />
+              แหม รู้ใจจังสั่งที่หนูชอบ<br />
+              แป๊ะซะ ปลาช่อนตัวใหญ่<br />
+              ต้มยำน้ำใส หนูช๊อบชอบ<br />
+              โอมากาเสะ chef table ชั้นดี<br />
+              เชิญกอดอน แรมซีย์จัดให้ที สิ่งที่หนูชอบ<br />
+              แต่มีอีกสิ่งที่หนูอยากจะขอพ่อ<br />
+              (ถ้าฟ้าต้องเสียตัว ฟ้าต้องได้เป็นแอร์)<br />
+              <br />
+              [Pre-Chorus]<br />
+              Ah-ah-ah-ah-ah, ถึงแม้ว่าป๊าจะแก่<br />
+              My daddy<br />
+              Oh-oh-oh-oh-oh, แต่แบบนี้อ่ะน่ารักจะตาย<br />
+              อ้อนทั้งวันยังไหว, my darling<br />
+              <br />
+              [Chorus]<br />
+              My sugar daddy, หมดใจเลยที่ฟ้าให้พ่อ<br />
+              รักจริงไม่ได้หลอก แค่อยากจะขอให้พ่อช่วยฟ้าหน่อย<br />
+              เงินในบัญชีไม่พอใช้ พ่อโอนให้ฟ้าหน่อยได้ไหม<br />
+              และอยากได้รถคันใหม่นะคะ นะคะ นะ ฟ้ารักพ่อ<br />
+              My sugar daddy, หมดใจเลยที่ฟ้าให้พ่อ<br />
+              รักจริงไม่ได้หลอก แค่อยากจะขอให้พ่อช่วยฟ้าหน่อย<br />
+              กระเป๋าดี ๆ ต้องมีใช้ พ่อซื้อให้ฟ้าหน่อยได้ไหม<br />
+              และอยากได้คอนโดใหม่นะคะ นะคะ นะ ฟ้ารักพ่อ<br />
+              <br />
+              [Bridge]<br />
+              แลกด้วยหัวใจ ให้ด้วยทั้งกาย<br />
+              อยากขอบคุณฟ้าที่นำฟ้ามาเจอพ่อ<br />
+              คนที่แสนดีคือพ่อคนนี้<br />
+              จะเป็นเด็กดีตอบแทนที่ฟ้ารักพ่อ<br />
+              <br />
+              [Chorus]<br />
+              My sugar daddy, หมดใจเลยที่ฟ้าให้พ่อ<br />
+              รักจริงไม่ได้หลอก แค่อยากจะขอให้พ่อช่วยฟ้าหน่อย<br />
+              เงินในบัญชีไม่พอใช้ พ่อโอนให้ฟ้าหน่อยได้ไหม<br />
+              และอยากได้รถคันใหม่นะคะ นะคะ นะ ฟ้ารักพ่อ<br />
+              My sugar daddy, หมดใจเลยที่ฟ้าให้พ่อ<br />
+              รักจริงไม่ได้หลอก แค่อยากจะขอให้พ่อช่วยฟ้าหน่อย<br />
+              กระเป๋าดี ๆ ต้องมีใช้ พ่อซื้อให้ฟ้าหน่อยได้ไหม<br />
+              และอยากได้คอนโดใหม่นะคะ นะคะ นะ ฟ้ารักพ่อ<br />
+              <br />
+              [Post-Chorus]<br />
+              นะ นะ my darling, ooh, no, no, no<br />
+              นะ นะ my darling, ooh, คะ นะคะ นะ ฟ้ารักพ่อ<br />
+              นะ นะ my darling, ooh, no, no, no<br />
+              นะ นะ my darling, ooh, คะ นะคะ นะ ฟ้ารักพ่อ
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  
+  <!-- Script for Submit and Modal Success -->
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (() => {
+      "use strict";
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      const forms = document.querySelectorAll(".needs-validation");
+
+      // Loop over them and prevent submission
+      Array.from(forms).forEach((form) => {
+        form.addEventListener(
+          "submit",
+          (event) => {
+            event.preventDefault();
+            if (!form.checkValidity()) {
+              event.stopPropagation();
+              document.getElementById("success-alert").classList.add("d-none");
+            } else {
+              document
+                .getElementById("success-alert")
+                .classList.remove("d-none");
+            }
+
+            form.classList.add("was-validated");
+          },
+          false
+        );
+      });
+    })();
+  </script>
+</html>
